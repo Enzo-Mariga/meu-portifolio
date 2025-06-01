@@ -1,0 +1,73 @@
+/* ===== DESIGN SYSTEM ===== */
+:root {
+  /* Cores */
+  --white: #ffffff;
+  --black: #121212;
+  --gray-100: #f9f9f9;
+  --gray-200: #e0e0e0;
+  --gray-700: #333333;
+  
+  /* Cores temáticas - Light */
+  --bg-light: var(--gray-100);
+  --text-light: var(--gray-700);
+  --primary-light: #4a6fa5;
+  --secondary-light: #6b8cae;
+  --card-light: var(--white);
+  --border-light: var(--gray-200);
+  
+  /* Cores temáticas - Dark */
+  --bg-dark: var(--black);
+  --text-dark: var(--gray-200);
+  --primary-dark: #6b8cae;
+  --secondary-dark: #4a6fa5;
+  --card-dark: #1e1e1e;
+  --border-dark: var(--gray-700);
+  
+  /* Espaçamentos */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+  
+  /* Bordas */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 50%;
+  
+  /* Tipografia */
+  --font-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  
+  /* Transições */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Tema padrão (light) */
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --primary: var(--primary-light);
+  --secondary: var(--secondary-light);
+  --card: var(--card-light);
+  --border: var(--border-light);
+}
+
+/* Tema escuro */
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --card: var(--card-dark);
+  --border: var(--border-dark);
+}
