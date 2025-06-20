@@ -1,0 +1,42 @@
+{
+  "nav_logo": "Enzo Eduardo Mariga",
+  "nav_about": "Sobre",
+  "nav_projects": "Projetos",
+  "nav_experience": "Experiência",
+  "nav_contact": "Contato",
+
+  "home_title": "Enzo Eduardo Mariga",
+  "home_subtitle": "Estudante de Ciência da Computação",
+  "home_description": "Em jornada de aprendizado contínuo em programação web, transformando desafios em oportunidades de crescimento.",
+  "btn_view_projects": "Ver projetos",
+
+  "about_title": "Sobre Mim",
+  "about_description": "Sou estudante de Ciência da Computação na Universidade Regional Integrada do Alto Uruguai e das Missões, com foco especial em desenvolvimento backend e inteligência artificial. Tenho perfil analítico, sou dedicado e estou constantemente em busca de aprimoramento técnico e novos desafios na área da tecnologia.",
+  "skills_title": "Habilidades",
+
+  "projects_title": "Projetos",
+  "project1_title": "Página de Links",
+  "project1_desc": "Página de links desenvolvida na faculdade usando HTML e CSS.",
+  "project2_title": "Página de Pedidos",
+  "project2_desc": "Página de resumo de pedidos desenvolvida como exercício acadêmico.",
+  "btn_view_github": "Ver no GitHub",
+
+  "experience_title": "Experiência",
+  "experience_job": "Programador de máquinas CNC",
+  "experience_company": "GAENA",
+  "experience_duration": "2017 - Atual",
+  "experience_responsibility1": "Programação e operação de máquinas CNC",
+  "experience_responsibility2": "Manutenção preventiva de equipamentos",
+  "experience_responsibility3": "Otimização de processos produtivos",
+
+  "contact_title": "Contato",
+  "form_name_label": "Nome",
+  "form_name_placeholder": "Enzo Eduardo Mariga",
+  "form_email_label": "E-mail",
+  "form_email_placeholder": "kedffe@gmail.com",
+  "form_message_label": "Mensagem",
+  "form_message_placeholder": "Sua mensagem",
+  "form_submit_button": "Enviar mensagem",
+
+  "social_title": "Redes Sociais"
+}

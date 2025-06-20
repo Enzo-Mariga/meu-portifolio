@@ -1,138 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Enzo Eduardo Mariga, estudante de Ciência da Computação">
-  <title>Enzo Mariga | Portfólio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfólio de Enzo Eduardo Mariga, estudante de Ciência da Computação" />
+    <title>Enzo Mariga | Portfólio</title>
+
+    <link rel="stylesheet" href="styles.css/root.css" />
+    <link rel="stylesheet" href="styles.css/reset.css" />
+    <link rel="stylesheet" href="styles.css/theme.css" />
+    <link rel="stylesheet" href="styles.css/main.css" />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
-  <header class="main-header">
-    <nav class="navbar">
-      <a href="#home" class="logo">Enzo Mariga</a>
-      <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#experience">Experiência</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-      <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
-    </nav>
-  </header>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="#home" class="logo" data-i18n="nav_logo">Enzo Eduardo Mariga</a>
 
-  <main>
-    <section id="home" class="hero fade-in">
-      <div class="hero-content">
-        <h1>Enzo Eduardo Mariga</h1>
-        <h2>Estudante de Ciência da Computação</h2>
-        <p class="hero-description">Em jornada de aprendizado contínuo em programação web,transformando desafios em oportunidades de crescimento.</p>
-        <a href="#projects" class="btn">Ver projetos</a>
-      </div>
-      <img src="https://github.com/Enzo-Mariga.png" alt="Foto de Enzo Eduardo Mariga" class="hero-image" loading="lazy">
-    </section>
+            <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    <section id="about" class="section fade-in">
-      <h2 class="section-title">Sobre Mim</h2>
-      <div class="about-content">
-        <p>Sou estudante de Ciência da Computação na Universidade Regional Integrada do Alto Uruguai e das Missões. Tenho interesse em desenvolvimento web, design de interfaces e inteligência artificial. Sou uma pessoa curiosa, dedicada e sempre buscando novos aprendizados.</p>
-        
-        <div class="skills">
-          <h3>Habilidades</h3>
-          <ul class="skills-list">
-            <li>💻 HTML & CSS</li>
-            <li>🐍 Python</li>
-            <li>🔧 CNC Programming</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">Sobre</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projetos</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Experiência</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
+            </ul>
 
-    <section id="projects" class="section fade-in">
-      <h2 class="section-title">Projetos</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Página de Links</h3>
-          <p>Página de links desenvolvida na faculdade usando HTML e CSS.</p>
-          <div class="project-links">
-            <a href="https://github.com/uri-erechim/tarefa-3-social-links-profile-html-css-Enzo-Mariga" target="_blank" rel="noopener noreferrer" class="btn">Ver no GitHub</a>
-          </div>
-        </article>
-        
-        <article class="project-card">
-          <h3>Página de Pedidos</h3>
-          <p>Página de resumo de pedidos desenvolvida como exercício acadêmico.</p>
-          <div class="project-links">
-            <a href="https://github.com/uri-erechim/tarefa-4-order-summary-html-css-Enzo-Mariga" target="_blank" rel="noopener noreferrer" class="btn">Ver no GitHub</a>
-          </div>
-        </article>
-      </div>
-    </section>
+            <div class="controls">
+                <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
 
-    <section id="experience" class="section fade-in">
-      <h2 class="section-title">Experiência</h2>
-      <article class="experience-item">
-        <h3>Programador de máquinas CNC</h3>
-        <p class="company">GAENA X</p>
-        <p class="duration">2018 - Atual</p>
-        <ul class="responsibilities">
-          <li>Programação e operação de máquinas CNC</li>
-          <li>Manutenção preventiva de equipamentos</li>
-          <li>Otimização de processos produtivos</li>
-        </ul>
-      </article>
-    </section>
+                <div class="lang-toggle">
+                    <span class="icon">🌐</span>
+                    <select id="lang-selector" aria-label="Selecionar idioma">
+                        <option value="pt">PT</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <!-- Seção Hero -->
+        <section id="home" class="hero fade-in">
+            <div class="hero-content">
+                <h1 data-i18n="home_title">Enzo Eduardo Mariga</h1>
+                <h2 data-i18n="home_subtitle">Estudante de Ciência da Computação</h2>
+                <p class="hero-description" data-i18n="home_description">
+                    Em jornada de aprendizado contínuo em programação web, 
+                    transformando desafios em oportunidades de crescimento.
+                </p>
+                <a href="#projects" class="btn" data-i18n="btn_view_projects">Ver projetos</a>
+            </div>
+            <img src="https://github.com/Enzo-Mariga.png" 
+                 alt="Foto de Enzo Eduardo Mariga" 
+                 class="hero-image" 
+                 loading="lazy" />
+        </section>
 
-    <section id="contact" class="section fade-in">
-      <h2 class="section-title">Contato</h2>
-      <div class="contact-container">
-        <form id="contact-form" class="contact-form">
-          <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" placeholder="Enzo Eduardo Mariga" required>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Kedffe@gmail.com" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-submit">Enviar mensagem</button>
-        </form>
-        
-        <div class="social-links">
-          <h3>Redes Sociais</h3>
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/enzo-eduardo-171583247" target="_blank" rel="noopener noreferrer" class="social-link">
-                <span class="social-icon">in</span> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/Enzo-Mariga" target="_blank" rel="noopener noreferrer" class="social-link">
-                <span class="social-icon"></span> GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
+        <!-- Seção Sobre -->
+        <section id="about" class="section fade-in">
+            <h2 class="section-title" data-i18n="about_title">Sobre Mim</h2>
+            <div class="about-content">
+                <p data-i18n="about_description">
+                    Sou estudante de Ciência da Computação na Universidade Regional Integrada 
+                    do Alto Uruguai e das Missões, com foco especial em desenvolvimento backend  
+                    e inteligência artificial. Tenho perfil analítico, sou dedicado e estou
+                    constantemente em busca de aprimoramento técnico e novos desafios na área da tecnologia.
+                </p>
+                <div class="skills">
+                    <h3 data-i18n="skills_title">Habilidades</h3>
+                    <ul class="skills-list">
+                        <li>💻 HTML &amp; CSS</li>
+                        <li>🐍 Python</li>
+                        <li>🔧 CNC Programming</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <footer class="main-footer">
-    <p>© <span id="current-year">2025</span> Enzo Eduardo Mariga. Todos os direitos reservados.</p>
-  </footer>
+        <!-- Seção Projetos -->
+        <section id="projects" class="section fade-in">
+            <h2 class="section-title" data-i18n="projects_title">Projetos</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3 data-i18n="project1_title">Página de Links</h3>
+                    <p data-i18n="project1_desc">Página de links desenvolvida na faculdade usando HTML e CSS.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/uri-erechim/tarefa-3-social-links-profile-html-css-Enzo-Mariga" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn" data-i18n="btn_view_github">
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </article>
 
-  <script src="script.js"></script>
+                <article class="project-card">
+                    <h3 data-i18n="project2_title">Página de Pedidos</h3>
+                    <p data-i18n="project2_desc">Página de resumo de pedidos desenvolvida como exercício acadêmico.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/uri-erechim/tarefa-4-order-summary-html-css-Enzo-Mariga" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn" data-i18n="btn_view_github">
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Experiência -->
+        <section id="experience" class="section fade-in">
+            <h2 class="section-title" data-i18n="experience_title">Experiência</h2>
+            <article class="experience-item">
+                <h3 data-i18n="experience_job">Programador de máquinas CNC</h3>
+                <p class="company" data-i18n="experience_company">GAENA</p>
+                <p class="duration" data-i18n="experience_duration">2017 - Atual</p>
+                <ul class="responsibilities">
+                    <li data-i18n="experience_responsibility1">Programação e operação de máquinas CNC</li>
+                    <li data-i18n="experience_responsibility2">Manutenção preventiva de equipamentos</li>
+                    <li data-i18n="experience_responsibility3">Otimização de processos produtivos</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contact" class="section fade-in">
+            <h2 class="section-title" data-i18n="contact_title">Contato</h2>
+            <div class="contact-container">
+                <form action="https://formsubmit.co/kedffe@gmail.com" method="POST" class="contact-form" novalidate>
+                    <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html" />
+
+                    <div class="form-group">
+                        <label for="name" data-i18n="form_name_label">Nome</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enzo Eduardo Mariga"
+                            required
+                            data-i18n-placeholder="form_name_placeholder"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-i18n="form_email_label">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="kedffe@gmail.com"
+                            required
+                            data-i18n-placeholder="form_email_placeholder"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" data-i18n="form_message_label">Mensagem</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Sua mensagem"
+                            required
+                            data-i18n-placeholder="form_message_placeholder"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit" data-i18n="form_submit_button">Enviar mensagem</button>
+                </form>
+
+                <div class="social-links">
+                    <h3 data-i18n="social_title">Redes Sociais</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/enzo-eduardo-171583247" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <span class="social-icon"></span> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Enzo-Mariga" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <span class="social-icon"></span> GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>© <span id="current-year">2025</span> Enzo Eduardo Mariga.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

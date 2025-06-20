@@ -1,0 +1,44 @@
+:root {
+  /* Cores */
+  --bg-light: #f9f9f9;
+  --text-light: #333;
+  --primary-light: #4a6fa5;
+  --secondary-light: #6b8cae;
+  --card-light: #ffffff;
+  --border-light: #e0e0e0;
+
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+  --primary-dark: #6b8cae;
+  --secondary-dark: #4a6fa5;
+  --card-dark: #1e1e1e;
+  --border-dark: #333;
+
+  /* Espaçamentos */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+
+  /* Bordas */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 50%;
+
+  /* Tipografia */
+  --font-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  /* Transições */
+  --transition-fast: 0.15s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+}
