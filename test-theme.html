@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Tema</title>
+    <link rel="stylesheet" href="styles.css/root.css" />
+    <link rel="stylesheet" href="styles.css/reset.css" />
+    <link rel="stylesheet" href="styles.css/theme.css" />
+    <link rel="stylesheet" href="styles.css/main.css" />
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Teste de Tema</h1>
+        <p>Este é um teste para verificar se o sistema de temas está funcionando.</p>
+        <button id="theme-toggle">🌙 Alternar Tema</button>
+        <div style="margin-top: 20px; padding: 20px; background-color: var(--card); border: 1px solid var(--border); border-radius: 8px;">
+            <h2>Card de Teste</h2>
+            <p>Este card deve mudar de cor quando o tema for alterado.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+            
+            function updateThemeIcon(theme) {
+                themeToggle.textContent = theme === 'light' ? '🌙 Alternar Tema' : '☀️ Alternar Tema';
+            }
+        });
+    </script>
+</body>
+</html> 

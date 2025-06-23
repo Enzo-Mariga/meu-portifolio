@@ -1,8 +1,71 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Sistema de internacionalização
+  let currentLanguage = localStorage.getItem('language') || 'pt';
+  let translations = {};
+
+  // Carrega as traduções
+  async function loadTranslations(lang) {
+    try {
+      const response = await fetch(`lang/${lang}.json`);
+      translations[lang] = await response.json();
+    } catch (error) {
+      console.error(`Erro ao carregar traduções para ${lang}:`, error);
+    }
+  }
+
+  // Aplica as traduções aos elementos
+  function applyTranslations() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (translations[currentLanguage] && translations[currentLanguage][key]) {
+        element.textContent = translations[currentLanguage][key];
+      }
+    });
+
+    // Aplica traduções para placeholders
+    const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholderElements.forEach(element => {
+      const key = element.getAttribute('data-i18n-placeholder');
+      if (translations[currentLanguage] && translations[currentLanguage][key]) {
+        element.placeholder = translations[currentLanguage][key];
+      }
+    });
+  }
+
+  // Muda o idioma
+  async function changeLanguage(lang) {
+    if (!translations[lang]) {
+      await loadTranslations(lang);
+    }
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    applyTranslations();
+  }
+
+  // Inicializa o sistema de tradução
+  async function initI18n() {
+    await loadTranslations(currentLanguage);
+    applyTranslations();
+  }
+
+  // Configura o seletor de idioma
+  const langSelector = document.getElementById('lang-selector');
+  if (langSelector) {
+    langSelector.value = currentLanguage;
+    langSelector.addEventListener('change', (e) => {
+      changeLanguage(e.target.value);
+    });
+  }
+
+  // Inicializa as traduções
+  initI18n();
+
   // Controle de tema claro/escuro
   const themeToggle = document.getElementById('theme-toggle');
   const savedTheme = localStorage.getItem('theme') || 'light';
 
+  console.log('Tema salvo:', savedTheme);
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
@@ -10,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
+    console.log('Mudando tema de', currentTheme, 'para', newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
@@ -21,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'aria-label',
       theme === 'light' ? 'Alternar para tema escuro' : 'Alternar para tema claro'
     );
+    console.log('Ícone atualizado para tema:', theme);
   }
 
   // Menu mobile toggle

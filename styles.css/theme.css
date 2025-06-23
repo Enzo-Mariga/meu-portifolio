@@ -1,19 +1,19 @@
 :root {
   /* Light Theme */
-  --bg-light: #f8f9fa;
+  --bg-light: #ffffff;
   --text-light: #333333;
   --primary-light: #2563eb;
   --secondary-light: #f3f4f6;
-  --card-light: #ffffff;
+  --card-light: #f8f9fa;
   --border-light: #e5e7eb;
 
   /* Dark Theme */
-  --bg-dark: #121212;
-  --text-dark: #f8f8f8;
+  --bg-dark: #0f172a;
+  --text-dark: #f1f5f9;
   --primary-dark: #3b82f6;
-  --secondary-dark: #1e1e1e;
-  --card-dark: #1f2937;
-  --border-dark: #374151;
+  --secondary-dark: #1e293b;
+  --card-dark: #1e293b;
+  --border-dark: #334155;
 }
 
 [data-theme="light"] {

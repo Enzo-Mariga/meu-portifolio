@@ -1,12 +1,5 @@
 /* Tema escuro moderno implementado */
 :root {
-  --bg: #0e0e10;
-  --text: #e5e5e5;
-  --primary: #7f5af0;
-  --secondary: #715fcb;
-  --card: #1a1a1d;
-  --border: #2a2a2d;
-
   --font-base: 'Inter', sans-serif;
   --font-heading: 'Poppins', sans-serif;
 
@@ -43,10 +36,12 @@ body {
   flex-direction: column;
 }
 
-body {
-  transition:
-    background-color 0.5s,
-    color 0.5s;
+/* Adicionando transições para todos os elementos que usam variáveis de cor */
+* {
+  transition: 
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    border-color var(--transition-normal);
 }
 
 /* Tipografia */
@@ -438,30 +433,49 @@ input:focus, textarea:focus {
     margin-left: auto;
 }
 
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
 #theme-toggle {
-    font-size: 1.2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+#theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .lang-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .lang-toggle .icon {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .lang-toggle select {
-    padding: 0.2rem 0.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: var(--bg-color, #fff);
-    color: var(--text-color, #000);
-    cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.lang-toggle select:focus {
+  outline: none;
+  border-color: var(--primary);
 }
 

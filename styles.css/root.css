@@ -1,19 +1,4 @@
 :root {
-  /* Cores */
-  --bg-light: #f9f9f9;
-  --text-light: #333;
-  --primary-light: #4a6fa5;
-  --secondary-light: #6b8cae;
-  --card-light: #ffffff;
-  --border-light: #e0e0e0;
-
-  --bg-dark: #121212;
-  --text-dark: #e0e0e0;
-  --primary-dark: #6b8cae;
-  --secondary-dark: #4a6fa5;
-  --card-dark: #1e1e1e;
-  --border-dark: #333;
-
   /* Espaçamentos */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
