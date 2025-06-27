@@ -80,7 +80,6 @@ Integração com API de e-mail (EmailJS)
 Seção de habilidades com gráficos
 Internacionalização (PT/EN)
 Blog técnico com Markdown
---
 
 ---
 
