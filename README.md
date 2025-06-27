@@ -80,5 +80,18 @@ Integração com API de e-mail (EmailJS)
 Seção de habilidades com gráficos
 Internacionalização (PT/EN)
 Blog técnico com Markdown
+--
 
 ---
+
+🌐 Publicação
+O portfólio está disponível em:
+🔗 https://enzo-mariga.github.io/portfolio
+
+✅ Critérios Técnicos Atendidos
+Categoria	Implementação
+Semântica HTML	Uso de article, section, nav, entre outros
+CSS Moderno	Variáveis CSS, Flexbox, Grid
+JavaScript	Manipulação do DOM, Event Listeners
+Acessibilidade	aria-labels, alt text em imagens
+Performance	Lazy loading de imagens, CSS minificado
